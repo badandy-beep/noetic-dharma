@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- © 2025 Noetic Dharma Group, LLC | www.noeticdharma.com | CONFIDENTIAL & PROPRIETARY -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Noetic Dharma Group, LLC">
+  <meta name="copyright" content="© 2025 Noetic Dharma Group, LLC">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Client Access | Noetic Dharma Group</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Client Access specific styles */
+    .client-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 120px 20px 60px;
+      min-height: 100vh;
+    }
+
+    .access-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      max-width: 1100px;
+      align-items: center;
+    }
+
+    .access-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .access-image img {
+      max-width: 400px;
+      height: auto;
+      animation: float 7s ease-in-out infinite;
+      filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.5));
+    }
+
+    .access-content {
+      text-align: center;
+    }
+
+    .access-title {
+      font-family: var(--font-display);
+      font-size: 32px;
+      letter-spacing: 0.15em;
+      color: var(--ndg-gold);
+      margin-bottom: 16px;
+    }
+
+    .access-subtitle {
+      font-family: var(--font-elegant);
+      font-size: 22px;
+      font-style: italic;
+      color: var(--muted-silver);
+      margin-bottom: 48px;
+    }
+
+    .pin-form {
+      max-width: 300px;
+      margin: 0 auto 32px;
+    }
+
+    .pin-label {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--ndg-gold);
+      margin-bottom: 12px;
+    }
+
+    .pin-input {
+      width: 100%;
+      padding: 18px;
+      background: var(--glass-navy);
+      border: 1px solid var(--border-gold);
+      border-radius: 4px;
+      color: var(--pure-white);
+      font-family: var(--font-body);
+      font-size: 24px;
+      text-align: center;
+      letter-spacing: 0.5em;
+      transition: border-color 0.3s ease;
+    }
+
+    .pin-input:focus {
+      outline: none;
+      border-color: var(--ndg-gold);
+    }
+
+    .pin-input::placeholder {
+      color: var(--muted-silver);
+      opacity: 0.5;
+      letter-spacing: 0.3em;
+    }
+
+    .access-btn {
+      display: inline-block;
+      padding: 16px 48px;
+      background: var(--ndg-gold);
+      border: none;
+      border-radius: 4px;
+      color: var(--deep-space);
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 32px;
+    }
+
+    .access-btn:hover {
+      background: var(--ndg-gold-bright);
+    }
+
+    .security-notice {
+      font-size: 13px;
+      color: var(--muted-silver);
+      opacity: 0.7;
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .access-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .access-image img {
+        max-width: 300px;
+      }
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+
+    .shake {
+      animation: shake 0.3s ease-in-out;
+      border-color: #ff6b6b !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Cosmic Background -->
+  <div class="cosmic-bg"></div>
+  <div class="cosmic-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <a href="index.html" class="nav-logo">NOETIC DHARMA</a>
+    
+    <div class="nav-center">
+      <a href="philosophy.html">Philosophy</a>
+      <a href="fourth-turning.html">Fourth Turning</a>
+      <a href="services.html">Services</a>
+      <a href="credentials.html">Credentials</a>
+      <a href="our-conviction.html">Our Conviction</a>
+      <a href="https://ndg-autodeck.vercel.app/" target="_blank">The Deck</a>
+    </div>
+    
+    <div class="nav-right">
+      <a href="submit-opportunity.html" class="nav-cta">Submit Opportunity</a>
+      <a href="client-access.html" class="nav-cta primary">Client Access</a>
+    </div>
+    
+    <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="philosophy.html">Philosophy</a>
+    <a href="fourth-turning.html">Fourth Turning</a>
+    <a href="services.html">Services</a>
+    <a href="credentials.html">Credentials</a>
+    <a href="our-conviction.html">Our Conviction</a>
+    <a href="https://ndg-autodeck.vercel.app/" target="_blank">The Deck</a>
+    <a href="submit-opportunity.html">Submit Opportunity</a>
+    <a href="client-access.html">Client Access</a>
+  </div>
+
+  <main class="client-main">
+    <div class="access-container">
+      <div class="access-image">
+        <img src="herocontemplating.png" alt="Socrates Contemplating">
+      </div>
+      <div class="access-content">
+        <h1 class="access-title">CLIENT ACCESS</h1>
+        <p class="access-subtitle">"Execution with speed and force."</p>
+        
+        <div class="pin-form">
+          <label class="pin-label">ENTER ACCESS CODE</label>
+          <input type="text" id="accessCode" class="pin-input" placeholder="PROJECT-000000" maxlength="20" style="letter-spacing: 0.1em; font-size: 18px;">
+          <p id="errorMsg" style="color: #ff6b6b; font-size: 13px; margin-top: 8px; display: none;">Invalid access code. Please try again.</p>
+        </div>
+        
+        <button class="access-btn" onclick="validateAccess()">
+          ACCESS PORTAL
+        </button>
+        
+        <p class="security-notice">
+          This portal is restricted to authorized clients only. Access codes are provided directly by your NDG representative. All access attempts are logged and monitored.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="thumbsup.png" alt="Socrates">
+        <span>NOETIC DHARMA GROUP</span>
+      </div>
+      
+      <div class="footer-links">
+        <a href="philosophy.html">Philosophy</a>
+        <a href="fourth-turning.html">Fourth Turning</a>
+        <a href="services.html">Services</a>
+        <a href="our-conviction.html">Our Conviction</a>
+        <a href="client-access.html">Client Access</a>
+      </div>
+      
+      <div class="footer-copyright">
+        © 2025 Noetic Dharma Group, LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.remove('active');
+      });
+    });
+
+    // Client Access Validation
+    // Access codes from V2 lib/access-map.ts
+    const ACCESS_MAP = {
+      "MAHA-972028": { name: "Project MAHA", status: "active" },
+      "USAX-687173": { name: "Project USAX", status: "pending" },
+      "WEBUILT-398960": { name: "Project WEBUILT", status: "pending" },
+      "WARROOM-482177": { name: "Project WARROOM", status: "pending" },
+      "GARY-535231": { name: "Project GARY", status: "pending" },
+      "EMBLEM-146236": { name: "Project EMBLEM", status: "pending" },
+      "NIKOLAELECTRIC-411400": { name: "Project NIKOLA ELECTRIC", status: "pending" }
+    };
+
+    function validateAccess() {
+      const input = document.getElementById('accessCode');
+      const errorMsg = document.getElementById('errorMsg');
+      const code = input.value.trim().toUpperCase();
+      
+      if (ACCESS_MAP[code]) {
+        errorMsg.style.display = 'none';
+        const project = ACCESS_MAP[code];
+        
+        if (project.status === 'active') {
+          // Show portal (for now, placeholder message)
+          showPortal(project.name);
+        } else {
+          alert(`Access granted for ${project.name}.\n\nProject materials are being prepared. Your NDG representative will notify you when documents are available.`);
+        }
+      } else {
+        errorMsg.style.display = 'block';
+        input.classList.add('shake');
+        setTimeout(() => input.classList.remove('shake'), 500);
+      }
+    }
+
+    function showPortal(projectName) {
+      // Replace the access form with portal content
+      const container = document.querySelector('.access-content');
+      container.innerHTML = `
+        <h1 class="access-title">${projectName.toUpperCase()}</h1>
+        <p class="access-subtitle">Welcome to your secure project portal.</p>
+        
+        <div style="text-align: left; max-width: 400px; margin: 32px auto;">
+          <p style="color: var(--ndg-gold); font-family: var(--font-display); font-size: 12px; letter-spacing: 0.1em; margin-bottom: 16px;">AVAILABLE DOCUMENTS</p>
+          
+          <div style="background: var(--glass-navy); border: 1px solid var(--border-gold); border-radius: 4px; padding: 16px; margin-bottom: 12px;">
+            <span style="color: var(--pure-white);">📄 Executive Brief</span>
+            <span style="float: right; color: var(--muted-silver); font-size: 13px;">PDF</span>
+          </div>
+          <div style="background: var(--glass-navy); border: 1px solid var(--border-gold); border-radius: 4px; padding: 16px; margin-bottom: 12px;">
+            <span style="color: var(--pure-white);">📄 Strategic Thesis</span>
+            <span style="float: right; color: var(--muted-silver); font-size: 13px;">PDF</span>
+          </div>
+          <div style="background: var(--glass-navy); border: 1px solid var(--border-gold); border-radius: 4px; padding: 16px; margin-bottom: 12px;">
+            <span style="color: var(--pure-white);">📊 Financial Model</span>
+            <span style="float: right; color: var(--muted-silver); font-size: 13px;">XLSX</span>
+          </div>
+          <div style="background: var(--glass-navy); border: 1px solid var(--border-gold); border-radius: 4px; padding: 16px; margin-bottom: 12px;">
+            <span style="color: var(--pure-white);">📄 Board Materials</span>
+            <span style="float: right; color: var(--muted-silver); font-size: 13px;">PDF</span>
+          </div>
+        </div>
+        
+        <p class="security-notice">
+          Document links will be activated once materials are uploaded. Contact your NDG representative for access timing.
+        </p>
+        
+        <button class="access-btn" onclick="location.reload()" style="margin-top: 24px;">
+          ← BACK TO LOGIN
+        </button>
+      `;
+    }
+
+    // Enter key triggers validation
+    document.getElementById('accessCode').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        validateAccess();
+      }
+    });
+
+    // Console security notice
+    console.log('%c⚠️ CLIENT ACCESS PORTAL - AUTHORIZED USE ONLY', 'color: #ff6b6b; font-weight: bold; font-size: 14px;');
+    console.log('%c© 2025 Noetic Dharma Group, LLC | All access attempts are logged.', 'color: #d4a84b;');
+  </script>
+</body>
+</html>

@@ -1,0 +1,1035 @@
+/* © 2025 Noetic Dharma Group, LLC | www.noeticdharma.com | CONFIDENTIAL & PROPRIETARY */
+
+/* ==================== BASE STYLES ==================== */
+:root {
+  --deep-space: #050810;
+  --cosmic-navy: #0a0e1a;
+  --ndg-gold: #d4a84b;
+  --pure-white: #f2f4f8;
+  --muted-silver: #a8b2c1;
+  --michael-red: #8B0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: var(--pure-white);
+  background: var(--deep-space);
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* ==================== NAVIGATION ==================== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+.nav.scrolled {
+  background: rgba(5, 8, 16, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.nav-logo {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--ndg-gold);
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--pure-white);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--ndg-gold);
+}
+
+.nav-cta {
+  background: transparent;
+  border: 1px solid var(--ndg-gold);
+  padding: 10px 24px;
+  color: var(--ndg-gold) !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-cta:hover {
+  background: var(--ndg-gold);
+  color: var(--deep-space) !important;
+}
+
+/* ==================== HERO SECTION ==================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--deep-space);
+  overflow: hidden;
+}
+
+.hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* Left side - Socrates */
+.hero-left {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-left img {
+  height: 95vh;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Right side - Tablet and content */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.hero-tablet {
+  margin-bottom: 40px;
+}
+
+.hero-tablet img {
+  max-width: 500px;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--pure-white);
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.5);
+}
+
+.hero-definitions {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.hero-def {
+  text-align: center;
+  max-width: 220px;
+}
+
+.hero-def-term {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: var(--ndg-gold);
+  margin-bottom: 10px;
+}
+
+.hero-def-meaning {
+  display: block;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--muted-silver);
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: inline-block;
+  padding: 16px 48px;
+  border: 1px solid var(--ndg-gold);
+  color: var(--ndg-gold);
+  text-decoration: none;
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.hero-cta:hover {
+  background: var(--ndg-gold);
+  color: var(--deep-space);
+}
+
+.scroll-indicator {
+  font-size: 28px;
+  color: var(--muted-silver);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .hero-left {
+    height: 60vh;
+  }
+  
+  .hero-left img {
+    height: 60vh;
+  }
+  
+  .hero-right {
+    padding: 40px 20px 60px;
+  }
+  
+  .hero-definitions {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+/* ==================== SECTION STYLES ==================== */
+.section {
+  padding: 120px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--pure-white);
+}
+
+.section-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-style: italic;
+  text-align: center;
+  color: var(--muted-silver);
+  margin-bottom: 80px;
+}
+
+.content-label {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--ndg-gold);
+  margin-bottom: 12px;
+}
+
+/* ==================== FOUNDATION SECTION ==================== */
+.foundation {
+  background: var(--cosmic-navy);
+  max-width: none;
+  margin: 0;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.pillar {
+  text-align: center;
+  padding: 40px;
+  border: 1px solid rgba(212, 168, 75, 0.2);
+}
+
+.pillar-title {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--ndg-gold);
+  margin-bottom: 16px;
+}
+
+.pillar p {
+  color: var(--muted-silver);
+  font-size: 18px;
+}
+
+.quote-block {
+  text-align: center;
+  padding: 60px;
+  border-left: 3px solid var(--ndg-gold);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.quote-block blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-style: italic;
+  color: var(--pure-white);
+  margin-bottom: 16px;
+}
+
+.quote-block cite {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--ndg-gold);
+}
+
+/* ==================== PHILOSOPHY SECTION ==================== */
+.philosophy-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.philosophy-row.reverse {
+  direction: rtl;
+}
+
+.philosophy-row.reverse > * {
+  direction: ltr;
+}
+
+/* CRITICAL: Transparent image handling for Socrates images */
+.philosophy-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* NO background color */
+  background: transparent !important;
+}
+
+.philosophy-image img {
+  max-width: 350px;
+  height: auto;
+  /* Ensure transparency is preserved */
+  background: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+.philosophy-content {
+  background: rgba(10, 14, 26, 0.8);
+  padding: 48px;
+  border: 1px solid rgba(212, 168, 75, 0.15);
+}
+
+.philosophy-content h3 {
+  font-size: 36px;
+  margin-bottom: 24px;
+  color: var(--pure-white);
+}
+
+.philosophy-content p {
+  margin-bottom: 16px;
+  color: var(--muted-silver);
+}
+
+.method-steps p {
+  margin-bottom: 8px;
+}
+
+.synthesis {
+  text-align: center;
+  padding: 80px 60px;
+  border-left: 3px solid var(--ndg-gold);
+  max-width: 900px;
+  margin: 0 auto 100px;
+}
+
+.synthesis-title {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  letter-spacing: 0.15em;
+  color: var(--ndg-gold);
+  margin-bottom: 32px;
+}
+
+.synthesis p {
+  font-size: 20px;
+  color: var(--muted-silver);
+  margin-bottom: 16px;
+}
+
+.synthesis-bold {
+  font-weight: 600;
+  color: var(--pure-white) !important;
+}
+
+.synthesis-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-style: italic;
+  color: var(--pure-white);
+  margin-top: 32px;
+}
+
+/* ==================== TURNING SECTION ==================== */
+.turning {
+  background: var(--cosmic-navy);
+  max-width: none;
+  margin: 0;
+  padding: 120px 60px;
+}
+
+.turning-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px;
+  padding: 48px;
+  border: 1px solid rgba(212, 168, 75, 0.2);
+}
+
+.turning-intro p {
+  font-size: 20px;
+  color: var(--muted-silver);
+}
+
+.turning-forces {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.force-card {
+  background: rgba(10, 14, 26, 0.6);
+  padding: 40px;
+  border: 1px solid rgba(212, 168, 75, 0.1);
+  text-align: center;
+}
+
+.force-title {
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--ndg-gold);
+  margin-bottom: 16px;
+}
+
+.force-card p {
+  color: var(--muted-silver);
+  font-size: 16px;
+}
+
+.opportunity-zone {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.opportunity-content {
+  background: rgba(10, 14, 26, 0.9);
+  padding: 48px;
+  border: 1px solid rgba(212, 168, 75, 0.2);
+}
+
+.opportunity-content h3 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  color: var(--pure-white);
+}
+
+.opportunity-content ul {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.opportunity-content li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  color: var(--muted-silver);
+}
+
+.opportunity-content li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--ndg-gold);
+}
+
+/* CRITICAL: Transparent image handling */
+.opportunity-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: transparent !important;
+}
+
+.opportunity-image img {
+  max-width: 400px;
+  height: auto;
+  background: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+.turning-quote {
+  text-align: center;
+  padding: 60px;
+  border-left: 3px solid var(--ndg-gold);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.turning-quote blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px;
+  font-style: italic;
+  color: var(--pure-white);
+  margin-bottom: 16px;
+}
+
+.turning-quote p {
+  color: var(--muted-silver);
+}
+
+/* ==================== SERVICES SECTION ==================== */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.service-category {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--ndg-gold);
+  margin-bottom: 40px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(212, 168, 75, 0.3);
+}
+
+.service-item {
+  margin-bottom: 32px;
+}
+
+.service-item h4 {
+  font-size: 20px;
+  color: var(--pure-white);
+  margin-bottom: 8px;
+}
+
+.service-item p {
+  color: var(--muted-silver);
+  font-size: 16px;
+}
+
+.execution-doctrine {
+  text-align: center;
+  padding: 80px 60px;
+  background: var(--cosmic-navy);
+  border-left: 3px solid var(--ndg-gold);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.doctrine-title {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  color: var(--ndg-gold);
+  margin-bottom: 24px;
+}
+
+.doctrine-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  font-style: italic;
+  color: var(--pure-white);
+  margin-bottom: 24px;
+}
+
+.execution-doctrine p {
+  color: var(--muted-silver);
+}
+
+/* ==================== PRINCIPLES SECTION ==================== */
+.principles {
+  background: var(--cosmic-navy);
+  max-width: none;
+  margin: 0;
+}
+
+.principles-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.principle {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 48px;
+  align-items: flex-start;
+}
+
+.principle-num {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  color: var(--ndg-gold);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.principle-content h4 {
+  font-size: 22px;
+  color: var(--pure-white);
+  margin-bottom: 8px;
+}
+
+.principle-content p {
+  color: var(--muted-silver);
+}
+
+/* ==================== MORAL COMPASS SECTION ==================== */
+.moral-compass {
+  background: var(--pure-white);
+  color: var(--deep-space);
+  max-width: none;
+  margin: 0;
+  text-align: center;
+}
+
+.moral-header h2 {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  letter-spacing: 0.15em;
+  color: var(--deep-space);
+  margin-bottom: 48px;
+}
+
+.moral-content {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.moral-content p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.james-quote {
+  background: var(--cosmic-navy);
+  padding: 60px;
+  max-width: 800px;
+  margin: 48px auto;
+}
+
+.james-quote blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-style: italic;
+  color: var(--pure-white);
+  margin-bottom: 16px;
+}
+
+.james-quote cite {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  color: var(--ndg-gold);
+}
+
+/* ==================== ARMOR OF GOD SECTION ==================== */
+.armor-section {
+  background: var(--cosmic-navy);
+  max-width: none;
+  margin: 0;
+}
+
+.armor-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* St. Michael image styling */
+.armor-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: transparent !important;
+  position: relative;
+}
+
+.armor-image img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  background: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+.armor-content {
+  padding-top: 40px;
+}
+
+.armor-title {
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  letter-spacing: 0.15em;
+  color: var(--ndg-gold);
+  margin-bottom: 8px;
+}
+
+.armor-ref {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--muted-silver);
+  margin-bottom: 40px;
+}
+
+.armor-quote {
+  padding: 32px;
+  border-left: 3px solid var(--ndg-gold);
+  margin-bottom: 32px;
+}
+
+.armor-quote blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  color: var(--pure-white);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.armor-quote cite {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--ndg-gold);
+}
+
+.armor-quote em.gold {
+  color: var(--ndg-gold);
+  font-style: italic;
+}
+
+.michael-prayer blockquote {
+  font-size: 20px;
+}
+
+/* ==================== CONTACT SECTION ==================== */
+.contact {
+  text-align: center;
+  max-width: none;
+  margin: 0;
+  padding: 120px 60px;
+}
+
+.contact-title {
+  font-family: 'Cinzel', serif;
+  font-size: 32px;
+  letter-spacing: 0.15em;
+  color: var(--ndg-gold);
+  margin-bottom: 24px;
+}
+
+.contact-subtitle {
+  font-size: 18px;
+  color: var(--muted-silver);
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  text-align: left;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: var(--ndg-gold);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 16px;
+  background: rgba(10, 14, 26, 0.8);
+  border: 1px solid rgba(212, 168, 75, 0.2);
+  color: var(--pure-white);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--ndg-gold);
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 18px;
+  background: var(--ndg-gold);
+  border: none;
+  color: var(--deep-space);
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #e5bc6a;
+}
+
+.locations {
+  border-top: 1px solid rgba(212, 168, 75, 0.2);
+  padding-top: 40px;
+  margin-top: 40px;
+}
+
+.location-primary {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--pure-white);
+  margin-bottom: 8px;
+}
+
+.location-affiliates {
+  font-size: 14px;
+  color: var(--muted-silver);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background: var(--cosmic-navy);
+  padding: 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* CRITICAL: Transparent image handling for footer Socrates */
+.footer-socrates {
+  width: 50px;
+  height: auto;
+  opacity: 0.7;
+  background: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+.footer-logo span {
+  font-family: 'Cinzel', serif;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  color: var(--muted-silver);
+}
+
+.footer-links {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-links a {
+  color: var(--muted-silver);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--ndg-gold);
+}
+
+.footer-copyright {
+  font-size: 12px;
+  color: var(--muted-silver);
+  opacity: 0.6;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+  .nav {
+    padding: 16px 30px;
+  }
+  
+  .nav-links {
+    gap: 24px;
+  }
+  
+  .section {
+    padding: 80px 30px;
+  }
+  
+  .philosophy-row,
+  .opportunity-zone,
+  .armor-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .philosophy-row.reverse {
+    direction: ltr;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .turning-forces,
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+  
+  .nav-links a:not(.nav-cta) {
+    display: none;
+  }
+  
+  .hero-tagline {
+    font-size: 32px;
+  }
+  
+  .hero-definitions {
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .section-title {
+    font-size: 36px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+  
+  .armor-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .armor-image img {
+    max-width: 350px;
+  }
+}

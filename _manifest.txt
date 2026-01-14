@@ -1,0 +1,121 @@
+================================================================================
+NOETIC DHARMA GROUP - WEBSITE PACKAGE
+NDG-Website_2025-Jan-14.zip
+================================================================================
+
+PROJECT: NDG (Noetic Dharma Group Main Website)
+VERSION: 2.1 - V2 Content Integration
+DATE: January 14, 2025
+DEPLOYMENT: GitHub → Vercel → noeticdharma.com
+
+CHANGELOG (v2.1):
+- Archived V2 fonts (Canela) to /fonts/
+- Archived V2 hero images to /images/v2-archive/
+- Extracted client access codes to NDG-Client-Access-Codes_2025-Jan-14.md
+- Pending: Integrate "The Method" into philosophy.html
+- Pending: Merge "The Way" into our-conviction.html
+- Pending: Aesthetic tightening (padding, tap targets)
+
+================================================================================
+CONTENTS
+================================================================================
+
+HTML PAGES (8 files):
+├── index.html ................. Homepage (hero with definitions, parallax)
+├── philosophy.html ............ Socratic Method, Noetic/Dharma definitions
+├── fourth-turning.html ........ Crisis cycle, AI acceleration, NDG role
+├── services.html .............. 8 services with full descriptions
+├── credentials.html ........... Logo grid by sector (30 logos)
+├── our-conviction.html ........ St. Michael, Armor of God, Christianity
+├── submit-opportunity.html .... Deal/investment submission form
+└── client-access.html ......... PIN-protected client portal
+
+STYLESHEETS (2 files):
+├── styles.css ................. Main unified design system (active)
+└── styles-old.css ............. Legacy backup (not used)
+
+IMAGES - SOCRATES (8 files):
+├── epichalo.png ............... Socrates with epic golden halo
+├── herocontemplating.png ...... Socrates contemplating
+├── logotablet.png ............. NDG logo on stone tablet
+├── orating.png ................ Socrates teaching/speaking
+├── reading.png ................ Socrates reading scroll
+├── stmichael.png .............. St. Michael the Archangel
+├── thumbsup.png ............... Socrates thumbs up (footer)
+└── writing.png ................ Socrates writing
+
+IMAGES - BACKGROUND (1 file):
+└── 1279.jpg ................... Cosmic starfield (parallax background)
+
+IMAGES - LOGOS (30 files in /logos/):
+├── Finance: goldman-sachs, credit-suisse, societe-generale, 
+│            bessemer, oak-investment, denham-capital
+├── Defense: lockheed-martin, darpa, usaf, navy-seals, 
+│            white-house, nsc
+├── Technology: microsoft, llnl, los-alamos, berkeley-eecs,
+│              l3-tech, honeywell
+├── Media: discovery, nbc-universal, sony, warner-music,
+│          directv, castle-rock
+├── Industry: mckinsey, procter-gamble, omnicom, cosan,
+│             westlake, itt-sheraton
+└── Education: usc-marshall, san-diego
+
+FAVICONS (3 files):
+├── favicon.ico
+├── favicon-16x16.png
+└── favicon-32x32.png
+
+FONTS - CANELA (3 files in /fonts/):
+├── Canela-Regular.woff2 ....... Body text (premium font from V2)
+├── Canela-Medium.woff2 ........ Subheadings
+└── Canela-Semibold.woff2 ...... Headlines
+
+IMAGES - V2 ARCHIVE (3 files in /images/v2-archive/):
+├── ndg-hero-socrates-cosmic.png ......... High-res hero (15MB)
+├── ndg-method-socrates-contemplative.png  Method section image (7.7MB)
+└── ndg-closing-socrates-approval.png .... Footer/closing image (5.6MB)
+
+DOCUMENTATION (5 files):
+├── _manifest.txt .............. This file
+├── NDG-Master-Reference_14-Dec-2024.md
+├── NDG-Client-Access-Specification_14-Dec-2024.md
+├── NDG-Deployment-Guide_14-Dec-2024.md
+└── NDG-Client-Access-Codes_2025-Jan-14.md ... V2 client codes reference
+
+LEGACY (1 file):
+└── index-old.html ............. Previous single-page version (backup)
+
+================================================================================
+PENDING CONFIGURATION
+================================================================================
+
+FORMSPREE FORMS (after deployment):
+1. Contact Form (index.html line 224):
+   - Replace: YOUR_CONTACT_FORM_ID
+   
+2. Opportunity Form (submit-opportunity.html line 74):
+   - Replace: YOUR_OPPORTUNITY_FORM_ID
+
+Both forms forward to: badolatoandy@gmail.com
+
+================================================================================
+DEPLOYMENT INSTRUCTIONS
+================================================================================
+
+1. Upload entire ZIP contents to GitHub repository
+2. Vercel auto-deploys from GitHub
+3. After live, create Formspree forms and update IDs
+4. Push form ID updates to GitHub
+
+================================================================================
+RESPONSIVE BREAKPOINTS
+================================================================================
+
+Desktop: > 1200px (6-column logo grid)
+Laptop: 1024-1200px (4-column logo grid)
+Tablet: 768-1024px (3-column grid, mobile nav)
+Mobile: < 768px (2-column grid, stacked forms)
+
+================================================================================
+© 2025 Noetic Dharma Group, LLC | CONFIDENTIAL & PROPRIETARY
+================================================================================

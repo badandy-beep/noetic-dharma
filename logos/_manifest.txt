@@ -1,0 +1,25 @@
+NOETIC DHARMA GROUP - CREDENTIALS UPDATE
+NDG-Credentials-Update_2025-Jan-14.zip
+================================================================================
+
+CHANGES:
+- All logos resized to consistent 200x80px
+- All logos have white background (no transparency issues)
+- Full color (no grayscale filter)
+- Frosted white cards on cosmic background
+- Randomized order (DARPA first, not Goldman)
+- No industry category headers
+- Gold glow hover effect
+
+CONTENTS:
+- credentials.html (updated page)
+- logos/ folder (32 processed logos)
+
+UPLOAD INSTRUCTIONS:
+1. Extract ZIP
+2. Upload credentials.html to root of GitHub repo (replace existing)
+3. Upload entire logos/ folder to GitHub repo (replace existing)
+4. Commit changes
+5. Vercel auto-deploys
+
+================================================================================

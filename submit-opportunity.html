@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- © 2025 Noetic Dharma Group, LLC | www.noeticdharma.com | CONFIDENTIAL & PROPRIETARY -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Noetic Dharma Group, LLC">
+  <meta name="copyright" content="© 2025 Noetic Dharma Group, LLC">
+  <meta name="description" content="Submit an investment or partnership opportunity to Noetic Dharma Group.">
+  <title>Submit Opportunity | Noetic Dharma Group</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Cosmic Background -->
+  <div class="cosmic-bg"></div>
+  <div class="cosmic-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <a href="index.html" class="nav-logo">NOETIC DHARMA</a>
+    
+    <div class="nav-center">
+      <a href="philosophy.html">Philosophy</a>
+      <a href="fourth-turning.html">Fourth Turning</a>
+      <a href="services.html">Services</a>
+      <a href="credentials.html">Credentials</a>
+      <a href="our-conviction.html">Our Conviction</a>
+      <a href="https://ndg-autodeck.vercel.app/" target="_blank">The Deck</a>
+    </div>
+    
+    <div class="nav-right">
+      <a href="submit-opportunity.html" class="nav-cta">Submit Opportunity</a>
+      <a href="client-access.html" class="nav-cta primary">Client Access</a>
+    </div>
+    
+    <button class="nav-mobile-toggle" onclick="toggleMobileMenu()" aria-label="Menu">☰</button>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="philosophy.html">Philosophy</a>
+    <a href="fourth-turning.html">Fourth Turning</a>
+    <a href="services.html">Services</a>
+    <a href="credentials.html">Credentials</a>
+    <a href="our-conviction.html">Our Conviction</a>
+    <a href="https://ndg-autodeck.vercel.app/" target="_blank">The Deck</a>
+    <a href="submit-opportunity.html">Submit Opportunity</a>
+    <a href="client-access.html">Client Access</a>
+  </div>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <span class="section-label">FOR FOUNDERS, OPERATORS & PRINCIPALS</span>
+    <h1 class="page-title">SUBMIT AN OPPORTUNITY</h1>
+    <p class="page-subtitle">We welcome thoughtful submissions from those navigating complexity.</p>
+  </header>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="content-text" style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <p>Noetic Dharma Group reviews opportunities across private equity, venture capital, merchant banking, M&A advisory, and strategic consulting.</p>
+      <p class="mt-2">We are selective. We do not seek—we are sought. But when there is alignment between your needs and our capabilities, we engage fully.</p>
+      <p class="mt-2"><strong class="text-gold">Complete the form below to begin the conversation.</strong></p>
+    </div>
+  </section>
+
+  <!-- Opportunity Form -->
+  <section class="section section-full contact-section">
+    <!-- FORMSPREE: Replace YOUR_OPPORTUNITY_FORM_ID with actual form ID -->
+    <form class="contact-form" action="https://formspree.io/f/YOUR_OPPORTUNITY_FORM_ID" method="POST" style="max-width: 700px;">
+      
+      <!-- Contact Information -->
+      <h3 class="text-gold mb-2" style="font-family: var(--font-display); font-size: 14px; letter-spacing: 0.15em;">CONTACT INFORMATION</h3>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">FIRST NAME *</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">LAST NAME *</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">EMAIL *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">PHONE *</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="company">COMPANY / ENTITY NAME *</label>
+        <input type="text" id="company" name="company" required>
+      </div>
+      
+      <!-- Opportunity Details -->
+      <h3 class="text-gold mb-2 mt-3" style="font-family: var(--font-display); font-size: 14px; letter-spacing: 0.15em;">OPPORTUNITY DETAILS</h3>
+      
+      <div class="form-group">
+        <label for="opportunityType">OPPORTUNITY TYPE *</label>
+        <select id="opportunityType" name="opportunityType" required>
+          <option value="">Select opportunity type</option>
+          <option value="equity-investment">Equity Investment</option>
+          <option value="debt-financing">Debt Financing</option>
+          <option value="ma-strategic-sale">M&A / Strategic Sale</option>
+          <option value="joint-venture">Joint Venture</option>
+          <option value="licensing">Licensing</option>
+          <option value="strategic-advisory">Strategic Advisory</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="stage">STAGE</label>
+          <select id="stage" name="stage">
+            <option value="">Select stage (optional)</option>
+            <option value="pre-revenue">Pre-Revenue</option>
+            <option value="early-revenue">Early Revenue</option>
+            <option value="growth-stage">Growth Stage</option>
+            <option value="mature-profitable">Mature / Profitable</option>
+            <option value="turnaround">Turnaround</option>
+            <option value="na">N/A</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="amountSought">AMOUNT SOUGHT</label>
+          <select id="amountSought" name="amountSought">
+            <option value="">Select range (optional)</option>
+            <option value="under-500k">Under $500K</option>
+            <option value="500k-2m">$500K – $2M</option>
+            <option value="2m-10m">$2M – $10M</option>
+            <option value="10m-50m">$10M – $50M</option>
+            <option value="50m-plus">$50M+</option>
+            <option value="na">N/A</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="description">BRIEF DESCRIPTION *</label>
+        <textarea id="description" name="description" rows="5" placeholder="Describe the opportunity, the problem you're solving, and why you're reaching out to NDG..." required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label for="referral">HOW DID YOU FIND US?</label>
+        <select id="referral" name="referral">
+          <option value="">Select (optional)</option>
+          <option value="referral">Referral</option>
+          <option value="search">Search Engine</option>
+          <option value="linkedin">LinkedIn</option>
+          <option value="event">Event / Conference</option>
+          <option value="press">Press / Media</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      
+      <!-- NDA Acknowledgment -->
+      <div class="form-group mt-3">
+        <label class="checkbox-label">
+          <input type="checkbox" name="ndaAcknowledgment" required>
+          <span>I acknowledge that this submission does not constitute a confidential disclosure. I understand that if NDG wishes to proceed, appropriate confidentiality agreements will be executed before any sensitive information is shared. *</span>
+        </label>
+      </div>
+      
+      <button type="submit" class="submit-btn mt-2">SUBMIT OPPORTUNITY</button>
+      
+      <p class="text-center text-silver mt-2" style="font-size: 14px;">
+        All submissions are reviewed. If there is potential alignment, we will respond within 5 business days.
+      </p>
+    </form>
+  </section>
+
+  <!-- What We Look For -->
+  <section class="section">
+    <span class="section-label">ALIGNMENT</span>
+    <h2 class="section-title">What We Look For</h2>
+    
+    <div class="pillars">
+      <div class="pillar">
+        <h3 class="pillar-title">CLARITY</h3>
+        <p>Leaders who can articulate the problem, the solution, and the stakes. Fuzzy thinking is a disqualifier.</p>
+      </div>
+      <div class="pillar">
+        <h3 class="pillar-title">INTEGRITY</h3>
+        <p>Principals who share our commitment to truth, transparency, and ethical conduct. Character matters.</p>
+      </div>
+      <div class="pillar">
+        <h3 class="pillar-title">ALIGNMENT</h3>
+        <p>Opportunities where our involvement can create transformational value—not just incremental improvement.</p>
+      </div>
+    </div>
+    
+    <div class="quote-block mt-3">
+      <blockquote>"We do not seek. We are sought. And we choose."</blockquote>
+      <cite>— NOETIC DHARMA GROUP</cite>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="thumbsup.png" alt="Socrates">
+        <span>NOETIC DHARMA GROUP</span>
+      </div>
+      
+      <div class="footer-links">
+        <a href="philosophy.html">Philosophy</a>
+        <a href="fourth-turning.html">Fourth Turning</a>
+        <a href="services.html">Services</a>
+        <a href="our-conviction.html">Our Conviction</a>
+        <a href="client-access.html">Client Access</a>
+      </div>
+      
+      <div class="footer-copyright">
+        © 2025 Noetic Dharma Group, LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobileMenu').classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
